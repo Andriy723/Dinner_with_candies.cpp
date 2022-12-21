@@ -1,12 +1,15 @@
 #include "Dinner.h"
 #include "Candy.h"
+
 #include <iostream>
 #include <array>
 #include <string>
+
 using namespace std;
 
 int main() {
     Dinner H;
+
     Candy C;
 
     Candy Candy1("Chocolade in the dream", 10.27, 5, 24.78, Bar);
@@ -22,6 +25,7 @@ int main() {
     H.printAllCandies();
     H.FindTheMostExpensiveCandies();
     H.SortCandies();
+
     C.Ate();
 
     return 0;

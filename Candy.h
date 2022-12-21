@@ -1,6 +1,8 @@
 #pragma once
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 enum Type {
@@ -18,12 +20,14 @@ private:
 	float Price;
 	Type CandyType;
 public:
-	string getName();
-	double getMass();
-	int getAmount();
-	float getPrice();
-	int getCandyType();
+	string GetName();
+	double GetMass();
+	int GetAmount();
+	float GetPrice();
+	int GetCandyType();
+
 	void Ate();
+
 	Candy();
 	Candy(string Name, double Mass, int Amount, float Price, Type CandyType);
 	~Candy();

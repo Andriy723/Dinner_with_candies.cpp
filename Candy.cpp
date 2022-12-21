@@ -1,8 +1,10 @@
 #include "Candy.h"
 #include "Dinner.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 Candy::Candy(string Name1, double Mass1, int Amount1, float Price1, Type CandyType1) {
@@ -33,21 +35,21 @@ Candy::Candy() {
 
 Candy::~Candy() {}
 
-int Candy::getCandyType() {
+int Candy::GetCandyType() {
 	return CandyType;
 }
-string Candy::getName() {
+string Candy::GetName() {
 	return Name;
 }
 
-double Candy::getMass() {
+double Candy::GetMass() {
 	return Mass;
 }
 
-int Candy::getAmount() {
+int Candy::GetAmount() {
 	return Amount;
 }
 
-float Candy::getPrice() {
+float Candy::GetPrice() {
 	return Price;
 }

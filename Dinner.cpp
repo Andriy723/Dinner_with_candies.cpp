@@ -1,9 +1,12 @@
 #include <iostream>
+
 #include "Candy.h"
 #include "Dinner.h"
+
 #include <string>
 #include <vector>
 #include <array>
+
 using namespace std;
 
 void Dinner::addCandy(Candy Candy1) { Candies.push_back(Candy1); }
@@ -14,16 +17,16 @@ void Dinner::SortCandies() {
 
 		for (int i = 0; i < Candies.size() - step; ++i) {
 
-			if (Candies[i].getPrice() > Candies[i + 1].getPrice()) {
+			if (Candies[i].GetPrice() > Candies[i + 1].GetPrice()) {
 				swap(Candies[i], Candies[i + 1]);
 			}
 		}
 	}
 }
 
-void Dinner::printAllCandies() {
+void Dinner::PrintAllCandies() {
 	for (int i = 0; i < Candies.size(); ++i) {
-		std::cout << "\n\n  Name = " << Candies[i].getName() << "\n  Mass = " << Candies[i].getMass() << "\n  Amount = " << Candies[i].getAmount() << "\n  Price = " << Candies[i].getPrice() << "\n  Candy Type = " << Candies[i].getCandyType() << "\n";
+		cout << "\n\n  Name = " << Candies[i].GetName() << "\n  Mass = " << Candies[i].GetMass() << "\n  Amount = " << Candies[i].GetAmount() << "\n  Price = " << Candies[i].GetPrice() << "\n  Candy Type = " << Candies[i].GetCandyType() << "\n";
 	}
 }
 
@@ -31,12 +34,12 @@ void Dinner::FindTheMostExpensiveCandies() {
 	SortCandies();
 	if (Candies.size() >= 3) {
 		for (int i = 0; i < 3; ++i) {
-			std::cout << "\n\n  Name = " << Candies[i].getName() << "\n  Mass = " << Candies[i].getMass() << "\n  Amount = " << Candies[i].getAmount() << "\n  Price = " << Candies[i].getPrice() << "\n  Candy Type = " << Candies[i].getCandyType() << "\n";
+			cout << "\n\n  Name = " << Candies[i].GetName() << "\n  Mass = " << Candies[i].GetMass() << "\n  Amount = " << Candies[i].GetAmount() << "\n  Price = " << Candies[i].GetPrice() << "\n  Candy Type = " << Candies[i].GetCandyType() << "\n";
 		}
 	}
 	else {
 		for (int i = 0; i < Candies.size(); ++i) {
-			std::cout << "\n\n  Name = " << Candies[i].getName() << "\n  Mass = " << Candies[i].getMass() << "\n  Amount = " << Candies[i].getAmount() << "\n  Price = " << Candies[i].getPrice() << "\n  Candy Type = " << Candies[i].getCandyType() << "\n";
+			cout << "\n\n  Name = " << Candies[i].GetName() << "\n  Mass = " << Candies[i].GetMass() << "\n  Amount = " << Candies[i].GetAmount() << "\n  Price = " << Candies[i].GetPrice() << "\n  Candy Type = " << Candies[i].GetCandyType() << "\n";
 		}
 	}
 }
@@ -53,10 +56,10 @@ Dinner::Dinner() {
 
 Dinner::~Dinner() {}
 
-int Dinner::getDay() {
+int Dinner::GetDay() {
 	return Day;
 }
 
-float Dinner::getTime() {
+float Dinner::GetTime() {
 	return Time;
 }
